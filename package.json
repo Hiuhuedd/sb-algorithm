@@ -1,0 +1,23 @@
+{
+  "name": "sb-algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js -p 3005"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.19",
+    "react-countdown": "^2.3.2",
+    "socket.io": "^4.5.1",
+    "tasktimer": "^3.0.0"
+  }
+}
