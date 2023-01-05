@@ -108,7 +108,7 @@ let results = [];
 let nonce = 0;
 let crashPoint = "1.00";
 
-let time = 1.20;
+let time = 1.50;
 
 const crushSetter = () => {
   serverSeed = generateServerSeed();
