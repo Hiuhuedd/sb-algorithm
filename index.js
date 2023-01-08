@@ -108,7 +108,7 @@ let results = [];
 let nonce = 0;
 let crashPoint = "1.00";
 
-let time = 1.50;
+let time = 1.05;
 
 const crushSetter = () => {
   serverSeed = generateServerSeed();
@@ -156,10 +156,10 @@ function timer() {
   if (running === true) {
     cd = setInterval(hello, 1000);
   }
-  // console.log(time.toFixed(2))
+  console.log(time.toFixed(2))
   if (time.toFixed(2) === parseFloat(crashPoint).toFixed(2)) {
     stop();
-    //console.log(crashPoint)
+    console.log(crashPoint)
     running = false;
     if (running === false) {
       cd = setInterval(hello, 1000);
@@ -189,7 +189,7 @@ const getApiAndEmit = (socket) => {
     liveBets: liveData,
     round: round,
   };
-  // console.log(response.liveBets)
+  console.log(response.liveBets)
   // Emitting a new message. Will be consumed by the client
   io.sockets.emit("FromAPI", response);
 };
@@ -198,7 +198,6 @@ const getApiAndEmit2 = (socket) => {
 };
 //this is the verification url
 app.get("/verify", (req, res, next) => {
-  console.log("here")
   const combination = combine(serverSeed, clientSeed, nonce);
   const result = (getCrashPoint(combination) / 100).toFixed(2);
   res.status(200).json({ status: 200, result: result });
