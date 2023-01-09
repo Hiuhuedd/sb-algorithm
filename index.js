@@ -156,10 +156,10 @@ function timer() {
   if (running === true) {
     cd = setInterval(hello, 1000);
   }
-  console.log(time.toFixed(2))
+  // console.log(time.toFixed(2))
   if (time.toFixed(2) === parseFloat(crashPoint).toFixed(2)) {
     stop();
-    console.log(crashPoint)
+    // console.log(crashPoint)
     running = false;
     if (running === false) {
       cd = setInterval(hello, 1000);
@@ -189,7 +189,7 @@ const getApiAndEmit = (socket) => {
     liveBets: liveData,
     round: round,
   };
-  console.log(response.liveBets)
+  // console.log(response.liveBets)
   // Emitting a new message. Will be consumed by the client
   io.sockets.emit("FromAPI", response);
 };
