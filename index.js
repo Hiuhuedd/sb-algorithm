@@ -203,6 +203,7 @@ app.get("/verify", (req, res, next) => {
   res.status(200).json({ status: 200, result: result });
   next();
 });
-server.listen(port, () => console.log(`Listening on port ${port}`));
+const host='0.0.0.0'
+server.listen(port,host, () => console.log(`Listening on port ${port}`));
 
 // #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
