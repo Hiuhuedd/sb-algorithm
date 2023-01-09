@@ -25,7 +25,7 @@ const server = http.createServer(app);
 //const io = socketIo(server);
 const io = socketIo(server, {
   cors: {
-    origin: ["http://localhost:3000","https://safaribust.netlify.app"], //https://demo.safaribust.co.ke
+    origin: ["http://localhost:3000","https://safaribust.netlify.app","*"], //https://demo.safaribust.co.ke
   },
 });
 
